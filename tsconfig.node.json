@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
+    "target": "es2023",
+    "lib": ["ES2023"],
+    "module": "esnext",
+    "types": ["node", "vite/client"],
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "moduleDetection": "force",
+    "noEmit": true,
+
+    /* Linting */
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "erasableSyntaxOnly": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "typeRoots": ["./node_modules/@types", "./src/interfaces", "./vite-env.d.ts"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/app/components/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@routes/*": ["src/app/routes/*"],
+      "@stores/*": ["src/app/stores/*"],
+      "@utils/*": ["src/app/utils/*"],
+      "@interfaces/*": ["src/app/interfaces/*"],
+      "@hooks/*": ["src/app/hooks/*"],
+      "@assets/*": ["src/app/assets/*"],
+      "@constants/*": ["src/app/constants/*"]
+    },
+    "allowJs": true
+  },
+  "include": ["src", "src/**/*.d.ts", "prettier.config.js", "vite-env.d.ts"],
+  "rules": {
+    "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }]
+  }
+}
